@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+  
+<suite name="Suite1" verbose="1" >
+   <parameter name="browserName" value="chrome"/>
+  <parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"/>
+  <parameter name="username" value="Admin"/>
+  <parameter name="password" value="admin123"/>
+  <test name="hrmlogininfo" enabled="true">
+    <classes>
+       <class name="com.testng.Orangehrm" >
+         <methods>
+           <include name="Lunchapp"/>
+           <include name="Enterlogindetails"/>
+           <include name="verifyMyinfo"/>
+         </methods>
+       </class>
+    </classes>
+  </test>
+    <test name="hrmAddemployeepageinfo" >
+    <classes>
+       <class name="com.testng.Orangehrm" >
+         <methods>
+           <include name="Lunchapp"/>
+           <include name="Enterlogindetails"/>
+           <include name="navigatetoAddemployee"/>
+           <include name="verifypage"/>
+         </methods>
+       </class>
+    </classes>
+  </test>  
+  <test name="hrmAddemployeepageinfo" enabled="false">
+    <classes>
+       <class name="com.testng.Orangehrm" >
+         <methods>
+           <include name="Lunchapp"/>
+           <include name="Enterlogindetails"/>
+           <include name="verifyemployee"/>
+         </methods>
+       </class>
+    </classes>
+  </test>  
+</suite>
